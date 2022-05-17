@@ -214,19 +214,24 @@ export default class ComposePicker extends Component {
                   textEndDate={this.state.textEndDate}
                 />
               </View>
-                <View
-                  style={{
-                    paddingBottom: '5%',
-                    width: '100%',
-                    height: '10%',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }}
-                >
-                  {this.renderButton()}
-                  {this.renderCancelButton()}
-                </View>
+               <View
+                style={{
+                  paddingBottom: '5%',
+                  width: '100%',
+                  paddingHorizontal: 16,
+                  height: '10%',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
+              >
+                {this.renderButton()}
+                <TouchableOpacity onPress={() => this.setModalVisible(false)}>
+                  <View style={{ margin: 15 }}>
+                    <Text style={[styles.contentText, customStyles.contentText]}>{this.props.cancelText ?? "Cancel"}</Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
             </View>
           </Modal>
         </View>
