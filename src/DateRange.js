@@ -25,7 +25,7 @@ const styles = {
     height: normalize(120),
     width: "100%",
     justifyContent: "center",
-    backgroundColor: "#F5A623",
+    backgroundColor: "#6F8372",
     paddingHorizontal: 20
   },
   dateContainer: {
