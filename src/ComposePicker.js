@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TouchableHighlight, Modal, Text } from 'react-native';
+import { View, TouchableHighlight, Modal, Text , TouchableOpacity} from 'react-native';
 import PropTypes from 'prop-types';
 import DateRange from './DateRange';
 import moment from 'moment';
