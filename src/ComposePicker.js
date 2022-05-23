@@ -64,6 +64,11 @@ export default class ComposePicker extends Component {
   };
   onCancel = () => {
     this.setModalVisible(false);
+    if (!this.props.startDate)
+      this.onReset()
+  }
+  onReset = () => {
+    this.setState({ startDate: null, endDate: null, showContent: false, selected: '' });
   }
   onConfirm = () => {
     const returnFormat = this.props.returnFormat || 'YYYY/MM/DD';
