@@ -96,7 +96,7 @@ export default class DateRange extends Component {
       this.setState({ ...this.state, startDate, endDate });
       if (endDate) {
         this.setState({
-          clearStart: startDate.format(headFormat),
+          clearStart: startDate?.format(headFormat),
           clearEnd: endDate.format(headFormat)
         });
       } else {
