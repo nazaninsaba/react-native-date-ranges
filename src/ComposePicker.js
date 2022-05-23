@@ -231,7 +231,7 @@ export default class ComposePicker extends Component {
                 }}
               >
                 {this.renderButton()}
-                <TouchableOpacity onPress={() => this.setModalVisible(false)}>
+                <TouchableOpacity onPress={() => this.onCancel()}>
                   <View style={{ margin: 15 }}>
                     <Text style={[styles.contentText, customStyles.contentText]}>{this.props.cancelText ?? "Cancel"}</Text>
                   </View>
