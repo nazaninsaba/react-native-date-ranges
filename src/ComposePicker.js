@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TouchableHighlight, Modal, Text , TouchableOpacity} from 'react-native';
+import { View, TouchableHighlight, Modal, Text, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import DateRange from './DateRange';
 import moment from 'moment';
@@ -152,7 +152,7 @@ export default class ComposePicker extends Component {
   };
 
   renderCancelButton = () => {
-    
+
     return (
       <TouchableHighlight
         underlayColor={'transparent'}
@@ -196,10 +196,16 @@ export default class ComposePicker extends Component {
           <Modal
             animationType="slide"
             onRequestClose={() => this.setModalVisible(false)}
-            transparent={false}
+            transparent={true}
+            style={{
+              elevation: 0
+            }}
             visible={this.state.modalVisible}
           >
-            <View style={{ flex: 1, flexDirection: 'column' , backgroundColor: this.props.calendarBgColor}}>
+            <View style={{
+              flex: 1, margin: 20, borderRadius: 30, overflow: 'hidden', borderColor: 'gray',
+              borderWidth: 2, flexDirection: 'column', backgroundColor: '#fff'
+            }}>
               <View style={{ height: '90%' }}>
                 <DateRange
                   headFormat={this.props.headFormat}
@@ -219,7 +225,7 @@ export default class ComposePicker extends Component {
                   textEndDate={this.state.textEndDate}
                 />
               </View>
-               <View
+              <View
                 style={{
                   paddingBottom: '5%',
                   width: '100%',
